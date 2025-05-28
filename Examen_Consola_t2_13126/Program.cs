@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -60,9 +61,15 @@ namespace Examen_Consola_t2_13126
                                 }
                                 else
                                 {
-
-                                    saldo = saldo + (deposito - 2);
-                                    Console.WriteLine("Depòsito realizado con exito....");
+                                    if (deposito == 2)
+                                    {
+                                        Console.WriteLine("Ingrese un monto mayor por comision..");
+                                    }
+                                    else
+                                    {
+                                        saldo = saldo + (deposito - 2);
+                                        Console.WriteLine("Depòsito realizado con exito....");
+                                    }
                                 }
                             }
                             break;
@@ -89,8 +96,10 @@ namespace Examen_Consola_t2_13126
                                     }
                                     else
                                     {
-                                        saldo = saldo - retiro - 8;
-                                        Console.WriteLine("Retiro realizado con exito....");
+                                        
+                                          saldo = saldo - retiro - 8;
+                                          Console.WriteLine("Retiro realizado con exito....");
+                                       
                                     }
                                 }
                             }
