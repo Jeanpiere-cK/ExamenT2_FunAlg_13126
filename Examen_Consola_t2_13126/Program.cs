@@ -13,6 +13,11 @@ namespace Examen_Consola_t2_13126
     {
         static void Main(string[] args)
         {
+            Cajero();
+        }
+        static void Cajero()
+        {
+
             Console.WriteLine("Ingrese su saldo: ");
             float saldo = 0;
             saldo = float.Parse(Console.ReadLine());
@@ -64,7 +69,7 @@ namespace Examen_Consola_t2_13126
                             }
                             else
                             {
-                                if (retiro > (saldo-8))
+                                if (retiro > (saldo - 8))
                                 {
                                     Console.WriteLine("Saldo insuficiente..");
                                 }
@@ -89,6 +94,7 @@ namespace Examen_Consola_t2_13126
                 } while (opcion != 4);
             }
         }
-        
     }
+        
+    
 }
