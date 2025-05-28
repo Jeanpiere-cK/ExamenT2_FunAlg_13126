@@ -54,8 +54,16 @@ namespace Examen_Consola_t2_13126
                             }
                             else
                             {
-                                saldo = saldo + (deposito - 2);
-                                Console.WriteLine("Depòsito realizado con exito....");
+                                if (deposito < 0)
+                                {
+                                    Console.WriteLine("No es posible realizar esta accion...");
+                                }
+                                else
+                                {
+
+                                    saldo = saldo + (deposito - 2);
+                                    Console.WriteLine("Depòsito realizado con exito....");
+                                }
                             }
                             break;
                         case 2:
@@ -69,14 +77,21 @@ namespace Examen_Consola_t2_13126
                             }
                             else
                             {
-                                if (retiro > (saldo - 8))
+                                if (retiro < 0)
                                 {
-                                    Console.WriteLine("Saldo insuficiente..");
+                                    Console.WriteLine("No es posible realizar esta accion...");
                                 }
                                 else
                                 {
-                                    saldo = saldo - retiro - 8;
-                                    Console.WriteLine("Retiro realizado con exito....");
+                                    if (retiro > (saldo - 8))
+                                    {
+                                        Console.WriteLine("Saldo insuficiente..");
+                                    }
+                                    else
+                                    {
+                                        saldo = saldo - retiro - 8;
+                                        Console.WriteLine("Retiro realizado con exito....");
+                                    }
                                 }
                             }
                             break;
