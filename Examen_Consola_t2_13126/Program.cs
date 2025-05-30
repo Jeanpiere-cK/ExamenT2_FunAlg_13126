@@ -14,7 +14,8 @@ namespace Examen_Consola_t2_13126
     {
         static void Main(string[] args)
         {
-            Cajero();
+            ClassCajero a = new ClassCajero();
+            a.Monto();
         }
         static void Cajero()
         {
